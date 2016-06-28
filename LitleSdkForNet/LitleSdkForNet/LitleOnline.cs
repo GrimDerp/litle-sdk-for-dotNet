@@ -377,6 +377,7 @@ namespace Litle.Sdk
         public transactionTypeWithReportGroup queryTransaction(queryTransaction queryTransaction)
         {
             litleOnlineRequest request = createLitleOnlineRequest();
+            fillInReportGroup(queryTransaction);
             request.queryTransaction = queryTransaction;
 
             litleOnlineResponse litleresponse = sendToLitle(request);

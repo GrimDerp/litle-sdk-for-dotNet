@@ -36,10 +36,10 @@ namespace Litle.Sdk.Test.Functional
         {
             queryTransaction query = new queryTransaction();
             query.id = "myId";
-            query.reportGroup = "myReportGroup";
             query.origId = "Deposit1";
             query.origActionType = actionTypeEnum.D;
             query.origLitleTxnId = 54321;
+            Console.WriteLine("Report Group: " + query.reportGroup);
 
 
             transactionTypeWithReportGroup response = litle.queryTransaction(query);
